@@ -1,0 +1,4 @@
+﻿The code under this folder is the subset of PSHome MultiServer
+(https://github.com/GitHubProUser67/PSHome-MultiServer, GPL-3.0) needed to build the MultiSocks service,
+at upstream commit 8778e985e4fbbec9ee8f29d007d256dd1df5814f, with this project's patches applied.
+Individual projects keep their own licence files where present.

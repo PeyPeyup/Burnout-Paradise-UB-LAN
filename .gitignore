@@ -1,0 +1,14 @@
+﻿dist/
+bin/
+obj/
+.vs/
+static/
+logs/
+backups/
+*.exe
+*.private.exe
+build-output/
+local-accounts.json
+road-rules.json
+
+!scripts/certs/*

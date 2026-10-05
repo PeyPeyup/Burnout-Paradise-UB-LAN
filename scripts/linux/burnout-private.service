@@ -1,0 +1,21 @@
+# Install:  sudo cp -r linux-x64 /opt/burnout-server && sudo useradd -r -s /usr/sbin/nologin burnout
+#           sudo chown -R burnout: /opt/burnout-server
+#           sudo cp burnout-private.service /etc/systemd/system/ && sudo systemctl daemon-reload
+#           sudo systemctl enable --now burnout-private
+# Edit SERVER_IP below first.
+[Unit]
+Description=Burnout Paradise private server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=burnout
+WorkingDirectory=/opt/burnout-server
+Environment=SERVER_IP=192.168.1.50
+Environment=MAX_USERS=2
+ExecStart=/bin/bash /opt/burnout-server/run-server.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
